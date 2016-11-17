@@ -1,5 +1,7 @@
 package numerosprimos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Adry
@@ -18,9 +20,6 @@ public class NumerosPrimos {
         {
         int numDigitos=pedirNumDigitos();
         int ndigitos=0;
-        numDigitos=Integer.parseInt(arg[0]);
-        if(numDigitos<=0)
-        System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         for(int i = 1; i <= 99999; i++ )
         {
             int divisionEntera = i;
@@ -64,8 +63,11 @@ public class NumerosPrimos {
         }
         }
  
-       public int pedirNumDigitos(){
-           if
+       public static int pedirNumDigitos(){
+            int numDigitos=Integer.parseInt(JOptionPane.showInputDialog("Numero de digitos "));
+           if(numDigitos<=0||numDigitos>5)
+           System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
+           return numDigitos;
        }
  
 }
