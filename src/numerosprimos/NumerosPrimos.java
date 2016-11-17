@@ -64,9 +64,11 @@ public class NumerosPrimos {
         }
  
        public static int pedirNumDigitos(){
-            int numDigitos=Integer.parseInt(JOptionPane.showInputDialog("Numero de digitos "));
-           if(numDigitos<=0||numDigitos>5)
-           System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
+            int numDigitos;
+           do{
+           JOptionPane.showMessageDialog(null,"Ingrese como parámetro, un numero de digitos correcto (mayor que 0 y menor que 5): ");
+           numDigitos=Integer.parseInt(JOptionPane.showInputDialog("Numero de digitos "));
+            }while (numDigitos<=0||numDigitos>5);
            return numDigitos;
        }
  
