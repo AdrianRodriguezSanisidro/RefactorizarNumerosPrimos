@@ -20,7 +20,7 @@ public class NumerosPrimos {
         int numDigitos = pedirNumDigitos();
         int ndigitos = 0;
         for (int i = 1; i <= 99999; i++) {
-            ndigitos = calculaDigitos(i);
+        ndigitos = calculaDigitos(i);
 
             if (ndigitos == numDigitos) {
                 if (i < 4) {
@@ -60,18 +60,18 @@ public class NumerosPrimos {
     public static int pedirNumDigitos() {
         int numDigitos;
         do {
-            JOptionPane.showMessageDialog(null, "Ingrese como parámetro, un numero de digitos correcto (mayor que 0 y menor que 5): ");
-            numDigitos = Integer.parseInt(JOptionPane.showInputDialog("Numero de digitos "));
+            numDigitos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese como parámetro, un numero de digitos correcto (mayor que 0 y menor que 5): "));
         } while (numDigitos <= 0 || numDigitos > 5);
         return numDigitos;
     }
-public static int calculaDigitos(int i){
-    int divisionEntera=i;
-    int contador=0;
-    while (divisionEntera!=0){
-        divisionEntera=divisionEntera/10;
-        contador++;
+
+    public static int calculaDigitos(int i) {
+        int divisionEntera = i;
+        int contador = 0;
+        while (divisionEntera != 0) {
+            divisionEntera = divisionEntera / 10;
+            contador++;
+        }
+        return contador;
     }
-    return contador;
-}
 }
