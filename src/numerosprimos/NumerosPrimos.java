@@ -20,15 +20,7 @@ public class NumerosPrimos {
         int numDigitos = pedirNumDigitos();
         int ndigitos = 0;
         for (int i = 1; i <= 99999; i++) {
-            int divisionEntera = i;
-
-            int contador = 0;
-
-            while (divisionEntera != 0) {
-                divisionEntera = divisionEntera / 10;
-                contador++;
-            }
-            ndigitos = contador;
+            ndigitos = calculaDigitos(i);
 
             if (ndigitos == numDigitos) {
                 if (i < 4) {
@@ -73,5 +65,13 @@ public class NumerosPrimos {
         } while (numDigitos <= 0 || numDigitos > 5);
         return numDigitos;
     }
-
+public static int calculaDigitos(int i){
+    int divisionEntera=i;
+    int contador=0;
+    while (divisionEntera!=0){
+        divisionEntera=divisionEntera/10;
+        contador++;
+    }
+    return contador;
+}
 }
