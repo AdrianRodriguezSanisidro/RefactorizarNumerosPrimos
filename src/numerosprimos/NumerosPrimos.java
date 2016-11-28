@@ -18,11 +18,11 @@ public class NumerosPrimos {
 
     public static void main(String arg[]) {
         int numDigitos = pedirNumDigitos();
-        int ndigitos = 0;
+        int nDigitos = 0;
         for (int i = 1; i <= 99999; i++) {
-        ndigitos = calculaDigitos(i);
+        nDigitos = calculaDigitos(i);
 
-            if (ndigitos == numDigitos) {
+            if (nDigitos == numDigitos) {
                 if (i < 4) {
                     esPrimo = true;
                 } else if (i % 2 == 0) {
